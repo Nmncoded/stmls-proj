@@ -1,0 +1,135 @@
+@mixin flex-btw-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin name {
+    font-size: 1.6rem;
+    font-weight: 550;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* about me article */
+
+.about-me-article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .design {
+        background-color: rgba(#ecaf4e,1);
+    }
+    .strategy {
+        background-color: rgba(#fc683e,1);
+    }
+    .mob-apps {
+        background-color: rgba(black,0.9);
+    }
+}
+
+.about1 {
+    width: 25%;
+    box-sizing: border-box;
+    @media screen and (max-width:768px) {
+        width: 100%;
+    };
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    div i {
+        color: rgba(white,1);
+        font-size: 3.6rem;
+        margin-bottom: 3rem;
+    }
+    header {
+        color: rgba(white,0.9);
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    p {
+        text-align: center;
+        font-size: 1.6rem;
+        color: rgba(white,0.6);
+        line-height: 1.6;
+    }
+};
+
+.coding {
+    div i, header, p {
+        color: rgba(black,0.9);
+    }
+}
+
+/* experiences & education article */
+
+.experiences-article, .education-article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(384.5px, 1fr));
+}
+.exp-img, .education-img {
+    font-size: 0;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.exp-text, .education-text {
+    display: grid;
+    align-content: center;
+    background-color: #fc683e;
+    box-sizing: border-box;
+    padding: 6rem;
+    h3, h4 {
+        font-size: 4rem;
+        color: rgba(white,0.7);
+        margin-bottom: 2rem;
+    }
+    .p, .p1 {
+        color: rgba(white,0.4);
+        font-size: 2rem;
+        font-weight: 0;
+        margin-bottom: 4rem;
+    }
+}
+.education-text {
+    background-color: #ecaf4e;
+}
+
+.graphic, .web {
+    display: flex;
+    margin: {
+        top: 2rem;
+        bottom: 2rem;
+    };
+    div {
+        @include flex-center-center;
+    }
+    div i {
+        color: rgba(white,0.8);
+        font-size: 3.2rem;
+        font-weight: 0;
+        margin-right: 2rem;
+    }
+}
+.designer {
+    color: rgba(white,0.6);
+    font-size: 2rem;
+    p {
+        margin-top: 1.4rem;
+        font-size: 1.6rem;
+        color: rgba(white,0.4);
+        line-height: 1.6;
+    }
+    span {
+        font-size: 1.6rem;
+        color: rgba(black,0.8);
+    }
+}

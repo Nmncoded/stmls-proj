@@ -1,0 +1,47 @@
+@mixin flex-btw-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer section */
+
+.footer {
+    @include flex-center-center;
+    flex-direction: column;
+    padding: 10rem 0;
+}
+.f-info {
+    display: flex;
+    margin-bottom: 3rem;
+    span {
+        font-size: 1.6rem;
+        color: rgba(black,0.5);
+        .color-orange {
+            color: rgba(#fc683e,1);
+        }
+    }
+};
+.border {
+    border-right: 2px solid rgba(black,0.4);
+    padding-right: .6rem;
+    margin-right: .6rem;
+}
+
+.f-nav {
+    display: flex;
+    list-style: none;
+    li a {
+        text-decoration: none;
+        font-size: 4rem;
+        color: rgba(black,0.8);
+        margin: {
+            left: 1.6rem;
+        };
+    }
+}
